@@ -981,4 +981,98 @@
     </footer>
 
     <script>
-        // Hero Carouse
+        // Hero Carousel
+        const carouselSlides = document.querySelector('.carousel-slides');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentSlide = 0;
+            } else {
+                currentSlide = index;
+            }
+            
+            carouselSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        // Categories Carousel
+        const categoriesContainer = document.querySelector('.categories-container');
+        const categoryCards = document.querySelectorAll('.category-card');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentCategory = 0;
+
+        function updateCategoryCarousel() {
+            const cardWidth = categoryCards[0].offsetWidth + 20; // including gap
+            categoriesContainer.style.transform = `translateX(-${currentCategory * cardWidth}px`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentCategory) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentCategory = index;
+                updateCategoryCarousel();
+            });
+        });
+
+        // Video Reels - Play on hover
+        const reels = document.querySelectorAll('.reel-video');
+        
+        reels.forEach(reel => {
+            reel.addEventListener('mouseenter', () => {
+                reel.play();
+            });
+            
+            reel.addEventListener('mouseleave', () => {
+                reel.pause();
+                reel.currentTime = 0;
+            });
+        });
+
+        // Add shadow effect on button click
+        const buttons = document.querySelectorAll('.btn');
+        
+        buttons.forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)';
+                button.style.transform = 'translateY(1px)';
+            });
+            
+            button.addEventListener('mouseup', () => {
+                button.style.boxShadow = '';
+                button.style.transform = '';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.boxShadow = '';
+                button.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
