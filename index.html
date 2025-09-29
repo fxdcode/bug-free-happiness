@@ -6,684 +6,53 @@
     <title>FX Textiles | Luxury Fashion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --earth-taupe: #6F664F;
-            --warm-linen: #F6F3EE;
-            --jute-gold: #C69C58;
-            --deep-coffee: #2C2418;
-            --clean-white: #FFFFFF;
-            --indigo-dye: #1E4B63;
-            --vermillion-red: #B92B2B;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--deep-coffee);
-            background-color: var(--warm-linen);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            color: var(--earth-taupe);
-            font-weight: 600;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--clean-white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--earth-taupe);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--jute-gold);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--deep-coffee);
-            font-weight: 500;
-            font-size: 15px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--jute-gold);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--jute-gold);
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .header-icons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .header-icons a {
-            color: var(--deep-coffee);
-            font-size: 18px;
-            transition: var(--transition);
-        }
-
-        .header-icons a:hover {
-            color: var(--jute-gold);
-        }
-
-        /* Hero Carousel */
-        .hero-carousel {
-            position: relative;
-            height: 80vh;
-            overflow: hidden;
-            margin-bottom: 80px;
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease;
-            height: 100%;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide-content {
-            text-align: center;
-            color: var(--clean-white);
-            background-color: rgba(47, 36, 24, 0.7);
-            padding: 40px;
-            border-radius: 5px;
-            max-width: 600px;
-        }
-
-        .slide-content h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--clean-white);
-        }
-
-        .slide-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--jute-gold);
-            color: var(--clean-white);
-            padding: 12px 30px;
-            border: none;
-            border-radius: 2px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background-color: var(--earth-taupe);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 10;
-        }
-
-        .carousel-btn:hover {
-            background-color: var(--clean-white);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-btn.prev {
-            left: 20px;
-        }
-
-        .carousel-btn.next {
-            right: 20px;
-        }
-
-        /* Categories Section */
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 2px;
-            background-color: var(--jute-gold);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .categories {
-            margin-bottom: 80px;
-        }
-
-        .categories-carousel {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .categories-container {
-            display: flex;
-            transition: transform 0.5s ease;
-            gap: 20px;
-        }
-
-        .category-card {
-            min-width: 300px;
-            background-color: var(--clean-white);
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .category-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .category-content {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .category-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .category-content p {
-            color: var(--deep-coffee);
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 10px;
-        }
-
-        .indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--earth-taupe);
-            opacity: 0.3;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .indicator.active {
-            opacity: 1;
-            background-color: var(--jute-gold);
-        }
-
-        /* Products Section */
-        .products {
-            margin-bottom: 80px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .product-card {
-            background-color: var(--clean-white);
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-img {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--vermillion-red);
-            color: var(--clean-white);
-            padding: 5px 10px;
-            font-size: 12px;
-            border-radius: 2px;
-        }
-
-        .product-content {
-            padding: 20px;
-        }
-
-        .product-content h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .product-price {
-            font-weight: 600;
-            color: var(--earth-taupe);
-            margin-bottom: 15px;
-        }
-
-        .show-more {
-            text-align: center;
-        }
-
-        /* Video Reels Section */
-        .video-reels {
-            margin-bottom: 80px;
-        }
-
-        .reels-container {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 20px;
-            padding: 10px 0;
-            scrollbar-width: none;
-        }
-
-        .reels-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .reel {
-            min-width: 300px;
-            height: 500px;
-            background-color: var(--clean-white);
-            border-radius: 10px;
-            overflow: hidden;
-            scroll-snap-align: start;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-
-        .reel-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .reel-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-            color: var(--clean-white);
-        }
-
-        /* Landscape Video */
-        .landscape-video {
-            margin-bottom: 80px;
-            position: relative;
-        }
-
-        .video-container {
-            height: 500px;
-            overflow: hidden;
-            border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .landscape-video video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(47, 36, 24, 0.3);
-            color: var(--clean-white);
-            text-align: center;
-        }
-
-        .video-overlay h2 {
-            font-size: 42px;
-            color: var(--clean-white);
-            margin-bottom: 20px;
-        }
-
-        /* Blog Section */
-        .blog {
-            margin-bottom: 80px;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .blog-card {
-            background-color: var(--clean-white);
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-img {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .blog-content {
-            padding: 25px;
-        }
-
-        .blog-meta {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 10px;
-            font-size: 14px;
-            color: var(--earth-taupe);
-        }
-
-        .blog-content h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .blog-content p {
-            margin-bottom: 20px;
-            color: var(--deep-coffee);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--deep-coffee);
-            color: var(--clean-white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--clean-white);
-            font-size: 20px;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: var(--jute-gold);
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-col ul li a {
-            color: var(--warm-linen);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--jute-gold);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--clean-white);
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--jute-gold);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .header-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .hero-carousel {
-                height: 60vh;
-            }
-            
-            .slide-content h2 {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-carousel {
-                height: 50vh;
-            }
-            
-            .slide-content {
-                padding: 20px;
-            }
-            
-            .slide-content h2 {
-                font-size: 28px;
-            }
-            
-            .section-title h2 {
-                font-size: 28px;
-            }
-            
-            .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-carousel {
-                height: 40vh;
-            }
-            
-            .slide-content h2 {
-                font-size: 24px;
-            }
-            
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .category-card {
-                min-width: 250px;
-            }
-            
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">FX <span>Textiles</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <div class="header-actions">
+                <a href="#" class="action-btn">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </a>
             </div>
+            
+            <a href="#" class="logo">FX <span>Textiles</span></a>
+            
+            <div class="header-actions">
+                <a href="#" class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Shop</span>
+                </a>
+                <a href="#" class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="mobile-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Shipping Info</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
         </div>
     </header>
 
@@ -757,11 +126,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-indicators">
-                    <div class="indicator active"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
+                <div class="categories-nav">
+                    <button class="category-btn prev-cat">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="category-btn next-cat">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -882,47 +253,41 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog">
+    <!-- Gallery Section -->
+    <section class="gallery">
         <div class="container">
             <div class="section-title">
-                <h2>From Our Journal</h2>
+                <h2>Visual Stories</h2>
             </div>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb25c5d1d1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> June 12, 2023</span>
-                            <span><i class="far fa-folder"></i> Sustainability</span>
-                        </div>
-                        <h3>The Future of Sustainable Textiles</h3>
-                        <p>Exploring innovative materials and processes that reduce environmental impact while maintaining luxury standards.</p>
-                        <a href="#" class="btn">Read More</a>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb25c5d1d1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
-                            <span><i class="far fa-folder"></i> Design</span>
-                        </div>
-                        <h3>Color Trends for Home Interiors</h3>
-                        <p>Discover the palette that will define luxury home decor in the coming season, from earthy neutrals to bold accents.</p>
-                        <a href="#" class="btn">Read More</a>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> April 15, 2023</span>
-                            <span><i class="far fa-folder"></i> Craftsmanship</span>
-                        </div>
-                        <h3>Preserving Traditional Weaving Techniques</h3>
-                        <p>How FX Textiles partners with artisan communities to keep ancient textile traditions alive and relevant.</p>
-                        <a href="#" class="btn">Read More</a>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
                     </div>
                 </div>
             </div>
@@ -965,14 +330,6 @@
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
-                    <form>
-                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 10px; margin: 10px 0; border: none; border-radius: 2px;">
-                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 FX Textiles. All rights reserved. | Luxury Textiles & Home Decor</p>
@@ -980,99 +337,6 @@
         </div>
     </footer>
 
-    <script>
-        // Hero Carousel
-        const carouselSlides = document.querySelector('.carousel-slides');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else if (index >= slides.length) {
-                currentSlide = 0;
-            } else {
-                currentSlide = index;
-            }
-            
-            carouselSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(currentSlide - 1);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            showSlide(currentSlide + 1);
-        });
-
-        // Auto-advance carousel
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
-
-        // Categories Carousel
-        const categoriesContainer = document.querySelector('.categories-container');
-        const categoryCards = document.querySelectorAll('.category-card');
-        const indicators = document.querySelectorAll('.indicator');
-        let currentCategory = 0;
-
-        function updateCategoryCarousel() {
-            const cardWidth = categoryCards[0].offsetWidth + 20; // including gap
-            categoriesContainer.style.transform = `translateX(-${currentCategory * cardWidth}px`;
-            
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                if (index === currentCategory) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentCategory = index;
-                updateCategoryCarousel();
-            });
-        });
-
-        // Video Reels - Play on hover
-        const reels = document.querySelectorAll('.reel-video');
-        
-        reels.forEach(reel => {
-            reel.addEventListener('mouseenter', () => {
-                reel.play();
-            });
-            
-            reel.addEventListener('mouseleave', () => {
-                reel.pause();
-                reel.currentTime = 0;
-            });
-        });
-
-        // Add shadow effect on button click
-        const buttons = document.querySelectorAll('.btn');
-        
-        buttons.forEach(button => {
-            button.addEventListener('mousedown', () => {
-                button.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)';
-                button.style.transform = 'translateY(1px)';
-            });
-            
-            button.addEventListener('mouseup', () => {
-                button.style.boxShadow = '';
-                button.style.transform = '';
-            });
-            
-            button.addEventListener('mouseleave', () => {
-                button.style.boxShadow = '';
-                button.style.transform = '';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-</html>
+                                                     </html>
