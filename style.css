@@ -50,18 +50,7 @@ header {
     padding: 20px 0;
 }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--earth-taupe);
-    text-decoration: none;
-    letter-spacing: 1px;
-}
 
-.logo span {
-    color: var(--jute-gold);
-}
 
 .header-actions {
     display: flex;
@@ -743,16 +732,12 @@ footer {
     padding: 1rem 0;
 }
 
-/* Ensure the header actions and logo are properly aligned */
-.header-actions, .logo {
+.logo {
     flex: 1;
+    text-align: center;
 }
 
 .header-actions:last-child {
     display: flex;
     justify-content: flex-end;
-}
-
-.logo {
-    text-align: center;
 }
