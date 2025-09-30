@@ -729,3 +729,30 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+    max-width: 150px; /* Adjust as needed */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Ensure the header actions and logo are properly aligned */
+.header-actions, .logo {
+    flex: 1;
+}
+
+.header-actions:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    text-align: center;
+}
