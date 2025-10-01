@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX Textiles | Luxury Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <!-- Logo on the left -->
+            <a href="#" class="logo">
+                <img src="https://i.ibb.co/8nMDpFfb/imageedit-1-2993847982-1.jpg" alt="FX Textiles Logo">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="#" class="action-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="action-btn">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="action-btn cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Shipping Info</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-slides">
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h2>Spring Collection 2023</h2>
+                    <p>Discover our latest luxury textiles inspired by nature's renewal</p>
+                    <a href="#" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb25c5d1d1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h2>Artisanal Craftsmanship</h2>
+                    <p>Each piece tells a story of tradition and innovation</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h2>Luxury Redefined</h2>
+                    <p>Experience textiles that transform spaces and inspire lives</p>
+                    <a href="#" class="btn">Discover</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Collections</h2>
+            </div>
+            <div class="categories-carousel">
+                <div class="categories-container">
+                    <div class="category-card">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb25c5d1d1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="category-content">
+                            <h3>Linen Collection</h3>
+                            <p>Breathable, natural fabrics for everyday luxury</p>
+                            <a href="#" class="btn">View Collection</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="category-content">
+                            <h3>Silk Elegance</h3>
+                            <p>Luxurious silks with unparalleled sheen and texture</p>
+                            <a href="#" class="btn">View Collection</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="category-content">
+                            <h3>Organic Cotton</h3>
+                            <p>Sustainable, soft fabrics for conscious living</p>
+                            <a href="#" class="btn">View Collection</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="category-content">
+                            <h3>Wool & Cashmere</h3>
+                            <p>Warmth and sophistication for cooler seasons</p>
+                            <a href="#" class="btn">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories-nav">
+                    <button class="category-btn prev-cat">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="category-btn next-cat">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.ibb.co/qMH6DYhx/cropped-71-Sh-Bw4g6-GL-UY1100-FMwebp.webp')">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Artisan Linen Throw</h3>
+                        <p class="product-price">$245.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.ibb.co/qMH6DYhx/cropped-71-Sh-Bw4g6-GL-UY1100-FMwebp.webp')">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Silk Jacquard Cushion</h3>
+                        <p class="product-price">$189.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.ibb.co/qMH6DYhx/cropped-71-Sh-Bw4g6-GL-UY1100-FMwebp.webp')"></div>
+                    <div class="product-content">
+                        <h3>Organic Cotton Duvet</h3>
+                        <p class="product-price">$320.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.ibb.co/qMH6DYhx/cropped-71-Sh-Bw4g6-GL-UY1100-FMwebp.webp')"></div>
+                    <div class="product-content">
+                        <h3>Cashmere Blanket</h3>
+                        <p class="product-price">$450.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <a href="#" class="btn">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Reels Section -->
+    <section class="video-reels">
+        <div class="container">
+            <div class="section-title">
+                <h2>Behind the Scenes</h2>
+            </div>
+            <div class="reels-container">
+                <div class="reel">
+                    <video class="reel-video" loop muted>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-textile-fabric-42913-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-content">
+                        <h3>Weaving Process</h3>
+                        <p>See how our artisans create intricate patterns</p>
+                    </div>
+                </div>
+                <div class="reel">
+                    <video class="reel-video" loop muted>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-person-sewing-a-fabric-42912-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-content">
+                        <h3>Hand Embroidery</h3>
+                        <p>Traditional techniques meet modern design</p>
+                    </div>
+                </div>
+                <div class="reel">
+                    <video class="reel-video" loop muted>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-textile-fabric-42913-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-content">
+                        <h3>Quality Inspection</h3>
+                        <p>Every piece undergoes rigorous quality checks</p>
+                    </div>
+                </div>
+                <div class="reel">
+                    <video class="reel-video" loop muted>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-person-sewing-a-fabric-42912-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-content">
+                        <h3>Dyeing Process</h3>
+                        <p>Natural dyes for vibrant, lasting colors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Video -->
+    <section class="landscape-video">
+        <div class="container">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-textile-fabric-42913-large.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <div>
+                        <h2>The Art of Textiles</h2>
+                        <p>Discover the craftsmanship behind every FX Textiles creation</p>
+                        <a href="#" class="btn">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visual Stories</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb25c5d1d1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>FX Textiles</h3>
+                    <p>Luxury textiles crafted with passion, precision, and purpose. Since 1985, we've been redefining what's possible in fabric design and quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Linen Collection</a></li>
+                        <li><a href="#">Silk Elegance</a></li>
+                        <li><a href="#">Organic Cotton</a></li>
+                        <li><a href="#">Wool & Cashmere</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FX Textiles. All rights reserved. | Luxury Textiles & Home Decor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
