@@ -621,7 +621,7 @@ footer {
 
 /* Logo Styles */
 .logo img {
-    height: 40px;
+    height: 80px;
     width: auto;
     max-width: 150px;
 }
@@ -635,7 +635,7 @@ footer {
 
 .logo {
     flex: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .header-actions:last-child {
